@@ -56,6 +56,9 @@ body, html{
     width: 100%;
     height: 40%
 }
+.theRightOne{
+    float: right !important;
+}
 .numberOne, .numberTwo, .numberThree{
     background-repeat: no-repeat;
     background-size: 100%;
@@ -97,12 +100,27 @@ body, html{
 .bottom .active{
     color: rgb(22, 90, 214);
 }
+.topNav{
+    display: none;
+}
 @media screen and (max-width: 992px){
     body{
         overflow-y: scroll;
     }
     nav{
         display: none !important;
+    }
+    .topNav{
+        display: flex;
+        position: fixed;
+        z-index: 20;
+        top: 0;
+        width: 100%;
+        padding: 10px;
+        background-color: lightskyblue;
+    }
+    .paddingForMobile{
+        padding-top: 45px;
     }
     .bottom{
         display: flex;
@@ -118,6 +136,9 @@ body, html{
     }
 
     .desktopOnly{
+        display: none;
+    }
+    .largeText{
         display: none;
     }
 }
